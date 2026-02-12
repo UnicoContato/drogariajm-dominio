@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farma Fácil | Sua Farmácia de Confiança</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            green: '#006837',
+                            red: '#ED1C24',
+                            dark: '#1f2937'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased overflow-x-hidden relative">
+
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-brand-green/20 rounded-full blur-3xl opacity-50 animate-blob"></div>
+        <div class="absolute top-[20%] right-[-10%] w-96 h-96 bg-brand-red/20 rounded-full blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-[-10%] left-[20%] w-96 h-96 bg-blue-400/20 rounded-full blur-3xl opacity-50 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="absolute inset-0 bg-white/70 backdrop-blur-md border-b border-white/20 shadow-sm opacity-0 transition-opacity duration-300" id="header-bg"></div>
+        <div class="container mx-auto px-6 py-4 relative flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tighter text-brand-green flex items-center gap-2">
+                <img src="img/logo.jpeg" alt="Farma Fácil Logo" class="h-10 w-auto rounded-md mix-blend-multiply">
+            </a>
+
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#inicio" class="text-gray-700 hover:text-brand-green font-medium transition">Início</a>
+                <a href="#sobre" class="text-gray-700 hover:text-brand-green font-medium transition">Sobre</a>
+                <a href="#servicos" class="text-gray-700 hover:text-brand-green font-medium transition">Serviços</a>
+                <a href="#galeria" class="text-gray-700 hover:text-brand-green font-medium transition">Galeria</a>
+                <a href="#contato" class="text-gray-700 hover:text-brand-green font-medium transition">Contato</a>
+                <a href="https://wa.me/556599436765" target="_blank" class="bg-brand-green text-white px-5 py-2 rounded-full font-semibold hover:bg-green-700 transition shadow-lg hover:shadow-green-500/30">
+                    (65) 9943-6765
+                </a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl border-t border-gray-100 shadow-xl md:hidden flex-col p-6 space-y-4">
+            <a href="#inicio" class="block text-lg font-medium text-gray-800">Início</a>
+            <a href="#sobre" class="block text-lg font-medium text-gray-800">Sobre</a>
+            <a href="#servicos" class="block text-lg font-medium text-gray-800">Serviços</a>
+            <a href="#galeria" class="block text-lg font-medium text-gray-800">Galeria</a>
+            <a href="#contato" class="block text-lg font-medium text-gray-800">Contato</a>
+        </div>
+    </header>
+
+    <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-green/90 to-brand-dark/70 z-10 mix-blend-multiply"></div>
+            <img src="img/3.jpeg" alt="Farma Fácil Fachada" class="w-full h-full object-cover animate-zoom">
+        </div>
+        
+        <div class="relative z-20 container mx-auto px-6 text-center md:text-left">
+            <div class="max-w-3xl glass-card p-8 md:p-12 rounded-3xl animate-fade-up">
+                <span class="inline-block px-4 py-1 rounded-full bg-brand-red/10 text-brand-red font-semibold text-sm mb-4 border border-brand-red/20">Desde 2005</span>
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                    Saúde e bem-estar ao seu alcance em <span class="text-brand-green">Cuiabá e VG</span>
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    Atuamos com responsabilidade e ética, oferecendo medicamentos e produtos de saúde com o atendimento que você confia.
+                </p>
+                <div class="flex flex-col md:flex-row gap-4">
+                    <a href="#contato" class="bg-brand-red text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-red-700 transition shadow-lg hover:shadow-red-500/40 text-center">
+                        Visite Nossas Lojas
+                    </a>
+                    <a href="https://wa.me/556599436765" class="bg-white/50 backdrop-blur-md text-brand-green border border-brand-green/30 px-8 py-4 rounded-xl font-bold text-lg hover:bg-white transition text-center">
+                        Fale no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-24 relative">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2 reveal-left">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-brand-green/20 rounded-2xl blur-lg transform -rotate-3"></div>
+                        <img src="img/2.jpeg" alt="Interior Farma Fácil" class="relative rounded-2xl shadow-2xl w-full object-cover h-[500px] border border-white/50">
+                    </div>
+                </div>
+                <div class="md:w-1/2 reveal-right">
+                    <h2 class="text-brand-green font-bold text-lg uppercase tracking-widest mb-2">Sobre Nós</h2>
+                    <h3 class="text-4xl font-bold text-gray-900 mb-6">Uma Questão de Confiança</h3>
+                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                        A Farma Fácil é uma rede de farmácias fundada em 2005, com forte atuação em Cuiabá e Várzea Grande. Atuamos de forma responsável no segmento farmacêutico, oferecendo acesso facilitado a medicamentos e produtos de saúde, sempre em rigorosa conformidade com as normas sanitárias e a legislação vigente.
+                    </p>
+                    <p class="text-gray-600 mb-8 text-lg leading-relaxed">
+                        Nosso compromisso vai além da venda: buscamos manter um atendimento ético, seguro e organizado, contribuindo ativamente para o cuidado e o bem-estar da nossa comunidade através de nossas unidades no CPA, Centro, Coxipó e Av. Rubens de Mendonça.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="glass-panel p-4 rounded-xl text-center">
+                            <span class="block text-3xl font-bold text-brand-green">+20 Anos</span>
+                            <span class="text-sm text-gray-500">De História</span>
+                        </div>
+                        <div class="glass-panel p-4 rounded-xl text-center">
+                            <span class="block text-3xl font-bold text-brand-green">5 Unidades</span>
+                            <span class="text-sm text-gray-500">Estratégicas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-24 bg-white/30 backdrop-blur-sm relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nossos Departamentos</h2>
+                <p class="text-gray-600">Tudo o que você precisa para sua saúde e higiene em um só lugar.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl hover-float reveal-up">
+                    <div class="w-16 h-16 bg-brand-green/10 rounded-full flex items-center justify-center mb-6 text-brand-green">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Farmácia Completa</h3>
+                    <p class="text-gray-600">Ampla variedade de medicamentos de referência, genéricos e similares com procedência garantida.</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl hover-float reveal-up" style="transition-delay: 100ms;">
+                    <div class="w-16 h-16 bg-brand-red/10 rounded-full flex items-center justify-center mb-6 text-brand-red">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Higiene Pessoal</h3>
+                    <p class="text-gray-600">Produtos para cuidados diários, higiene bucal, corporal e infantil das melhores marcas do mercado.</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl hover-float reveal-up" style="transition-delay: 200ms;">
+                    <div class="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mb-6 text-blue-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Perfumaria e Cosméticos</h3>
+                    <p class="text-gray-600">Linha completa de dermocosméticos, cuidados com a pele e beleza para seu bem-estar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900 reveal-up">Conheça Nossas Instalações</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="group relative h-64 rounded-2xl overflow-hidden shadow-lg reveal-up cursor-pointer">
+                    <div class="absolute inset-0 bg-brand-green/20 group-hover:bg-transparent transition duration-500 z-10"></div>
+                    <img src="img/1.jpeg" alt="Gôndolas" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                </div>
+                <div class="group relative h-64 rounded-2xl overflow-hidden shadow-lg reveal-up cursor-pointer md:col-span-2" style="transition-delay: 100ms;">
+                    <div class="absolute inset-0 bg-brand-green/20 group-hover:bg-transparent transition duration-500 z-10"></div>
+                    <img src="img/4.jpeg" alt="Área de Medicamentos" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                </div>
+                <div class="group relative h-64 rounded-2xl overflow-hidden shadow-lg reveal-up cursor-pointer md:col-span-3" style="transition-delay: 200ms;">
+                    <div class="absolute inset-0 bg-brand-green/20 group-hover:bg-transparent transition duration-500 z-10"></div>
+                    <img src="img/2.jpeg" alt="Visão Geral Loja" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-24 bg-white/40 backdrop-blur-md relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-12 bg-white/60 backdrop-blur-xl border border-white/40 rounded-3xl p-8 md:p-12 shadow-2xl reveal-up">
+                
+                <div class="lg:w-1/2 flex flex-col justify-center space-y-8">
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-2">Fale Conosco</h2>
+                        <p class="text-gray-600">Estamos prontos para atender você.</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-brand-green/10 rounded-lg text-brand-green">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Endereço Principal</h4>
+                                <p class="text-gray-600 text-sm">Av. Historiador Rubens de Mendonça, 1502<br>Bosque da Saúde, Cuiabá - MT<br>CEP 78.050-000</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-brand-green/10 rounded-lg text-brand-green">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Telefone / WhatsApp</h4>
+                                <p class="text-gray-600 text-sm">(65) 9943-6765</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-brand-green/10 rounded-lg text-brand-green">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Email</h4>
+                                <p class="text-gray-600 text-sm">rh.farmafacil@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-brand-green/10 rounded-lg text-brand-green">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Dados da Empresa</h4>
+                                <p class="text-gray-600 text-sm">Drogaria Farmafacil LTDA<br>CNPJ: 33.610.141/0001-85</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 h-80 lg:h-auto rounded-2xl overflow-hidden shadow-inner border border-white/30">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3842.668582963336!2d-56.0964149!3d-15.5855225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9376a91d1f057863%3A0x6b87635671587d5a!2sAv.%20Historiador%20Rubens%20de%20Mendon%C3%A7a%2C%201502%20-%20Bosque%20da%20Sa%C3%BAde%2C%20Cuiab%C3%A1%20-%20MT%2C%2078050-000!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white border-t border-gray-200 py-8 relative">
+        <div class="container mx-auto px-6 text-center text-gray-500 text-sm">
+            <img src="img/logo.jpeg" alt="Logo" class="h-8 mx-auto mb-4 opacity-80 mix-blend-multiply">
+            <p class="mb-2">DROGARIA FARMAFACIL LTDA - CNPJ: 33.610.141/0001-85</p>
+            <p>&copy; 2026 Farma Fácil. Todos os direitos reservados.</p>
+            <button id="open-policy" class="mt-4 text-brand-green hover:underline">Política de Privacidade</button>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/556599436765" target="_blank" class="fixed bottom-6 right-6 z-40 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition hover:scale-110 animate-pulse-custom flex items-center justify-center">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+
+    <div id="policy-modal" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-gray-900/60 backdrop-blur-sm transition-opacity" id="close-modal-bg"></div>
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white/90 backdrop-blur-xl rounded-2xl shadow-2xl max-w-lg w-full p-8 relative transform transition-all scale-95 opacity-0 modal-content">
+                <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-500 hover:text-red-500">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+                <h3 class="text-2xl font-bold mb-4 text-brand-green">Política de Privacidade</h3>
+                <div class="prose text-gray-600 text-sm max-h-60 overflow-y-auto">
+                    <p>A Drogaria Farmafacil LTDA valoriza a privacidade de seus clientes. Todos os dados coletados através de nossos canais são utilizados exclusivamente para fins de atendimento e melhoria de nossos serviços.</p>
+                    <p class="mt-2">Não compartilhamos suas informações pessoais com terceiros sem seu consentimento expresso, exceto quando exigido por lei.</p>
+                    <p class="mt-2">Ao utilizar nosso site ou entrar em contato pelo WhatsApp, você concorda com o uso de cookies essenciais para o funcionamento da plataforma e monitoramento de tráfego.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
